@@ -1,0 +1,44 @@
+{
+    "name": "phpunit",
+    "description": "phpunit documentation practice",
+    "type": "learning",
+    "license": "me",
+    "authors": [
+        {
+            "name": "Ahmed Waleed",
+            "email": "ahmed.waleed@datamonsterpk.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Phpunit\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Phpunit\\Tests\\": "tests/"
+        }
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "version": "1.0.1",
+    "require": {
+        "php": ">=7.2",
+        "ext-json": "*",
+        "ext-Reflection": "*",
+        "ext-pcre": "*",
+        "ext-mbstring": "*",
+        "ext-libxml": "*"
+    },
+    "require-dev": {
+        "ext-xdebug": "*",
+        "ext-openssl": "*",
+        "phpunit/phpunit": "7.3.*",
+        "mockery/mockery": "1.1.*",
+        "friendsofphp/php-cs-fixer": "2.13.*"
+    },
+    "scripts": {
+        "tests": "php vendor/bin/phpunit",
+        "cs-test": "php vendor/bin/php-cs-fixer fix --config phpcsfixer.php --dry-run --verbose --diff --diff-format=udiff"
+    }
+}
